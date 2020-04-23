@@ -1,0 +1,16 @@
+{
+  "name": "zoom-webhook-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "deploy-prod": "sls deploy -s production",
+    "deploy-dev": "sls deploy -s dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "aws-sdk": "^2.662.0"
+  }
+}
