@@ -7,7 +7,7 @@ const SQS = new AWS.SQS();
 module.exports.hello = async event => {
     try {
         await SQS.sendMessage({
-            MessageBody: JSON.stringify(event.body),
+            MessageBody: event.body,
             QueueUrl: eventsQueue
         }).promise();
 

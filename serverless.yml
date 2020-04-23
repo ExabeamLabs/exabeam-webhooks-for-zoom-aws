@@ -10,6 +10,14 @@ resources:
       Properties:
         QueueName: zoomEvents
         VisibilityTimeout: 30
+package:
+  exclude:
+    - node_modules/**
+    - .idea
+    - package.json
+    - package-lock.json
+    - .gitignore
+    - serverless.yml
 
 provider:
   name: aws
