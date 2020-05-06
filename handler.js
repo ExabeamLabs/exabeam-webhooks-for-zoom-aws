@@ -12,24 +12,24 @@ module.exports.hello = async event => {
         }).promise();
 
         // for debug only.
-        return {
-            statusCode: 200,
-            body: JSON.stringify(
-                {
-                    message: `Event sent to queue ${eventsQueue}`,
-                    input: event,
-                },
-                null,
-                2
-            ),
-        };
+        // return {
+        //     statusCode: 200,
+        //     body: JSON.stringify(
+        //         {
+        //             message: `Event sent to queue ${eventsQueue}`,
+        //             input: event
+        //         },
+        //         null,
+        //         2
+        //     )
+        // };
         // for debug only.
 
         // for prod.
-        // return {
-        //     statusCode: 200,
-        //     body: `event sent to queue [${event.body}}]`
-        // };
+        return {
+            statusCode: 200,
+            body: `event sent to queue [${event.body}}]`
+        };
         // for prod.
 
     } catch (e) {
